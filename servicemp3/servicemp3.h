@@ -211,6 +211,10 @@ public:
 	void setAC3Delay(int);
 	void setPCMDelay(int);
 
+#if HAVE_AMLOGIC
+	void AmlSwitchAudio(int index);
+	unsigned int get_pts_pcrscr(void);
+#endif
 	struct audioStream
 	{
 		GstPad* pad;
